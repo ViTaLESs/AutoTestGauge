@@ -11,10 +11,12 @@ public class DriverFactory {
     public static WebDriver getDriver() {
 
         String browser = System.getenv("BROWSER");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aleks\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+
         if (browser == null) {
             return new ChromeDriver();
         }
+
         switch (browser)
         {
             case "IE":

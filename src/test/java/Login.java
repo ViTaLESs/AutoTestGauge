@@ -2,9 +2,6 @@ import com.thoughtworks.gauge.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
-import static org.junit.Assert.assertEquals;
-
 public class Login {
 
     @Step("Go to th page  <http://www.google.com>")
@@ -12,7 +9,6 @@ public class Login {
         Driver.driver.get(url);
         Thread.sleep(10000);
         System.out.println("1 Step - Google page open");
-
     }
 
     @Step("Enter query <facebook login> in the search box and submit")
@@ -22,7 +18,6 @@ public class Login {
         searchBox.submit();
         Thread.sleep(5000);
         System.out.println("3 Step - Enter in a q text -facebook login");
-
     }
 
     @Step("Go to sign up page")
@@ -31,7 +26,6 @@ public class Login {
         findElement.click();
         Thread.sleep(10000);
         System.out.println("4 Step - Open login page");
-
     }
 
     @Step("Sign up customer with email and password")
@@ -41,7 +35,6 @@ public class Login {
         Driver.driver.findElement(By.cssSelector("#loginbutton")).click();
         Thread.sleep(10000);
         System.out.println("Enter email and pass");
-
     }
 
     @Step("Verify user Name")
@@ -51,6 +44,5 @@ public class Login {
         nameButton.click();
         Thread.sleep(10000);
         System.out.println("Test passed");
-
     }
 }
